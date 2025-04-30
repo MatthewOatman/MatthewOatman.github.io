@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthew Oatman | Personal Website</title>
+  <style>
+    /* Reset & Base Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Gill Sans', sans-serif;
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #a199dc;
+    }
+
+    #vanta-bg {
+      width: 100%;
+      min-height: 100vh; /* Allow to expand with content */
+      position: relative;
+      z-index: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .section {
+      padding: 50px 290px;
+      text-align: left;
+      min-height: 100vh;
+      background-color: rgba(31, 27, 46, 0.85); /* semi-transparent */
+    }
+
+    .overlay {
+      position: relative;
+      z-index: 10;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* change from center to flex-start */
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      padding-left: 1in; /* this gives exactly 1 inch of left margin */
+    }
+
+    .overlay img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .overlay h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .overlay p {
+      font-size: 1.2rem;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      
+    }
+
+    .about-text {
+      flex: 1 1 400px;
+      text-align: middle;
+    }
+
+    .about-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .about-image {
+      flex: 1 1 300px;
+    }
+
+    .about-image img {
+      width: 400px;         /* Change this to desired width */
+      height: 550px;        /* Change this to desired height */
+      object-fit: cover;    /* Ensures image fills area while cropping excess */
+      border-radius: 10px;
+      border: 2px solid white;
+    }
+    .highlight {
+      color: #a199dc; /* Light purple */
+      font-weight: bold; /* Optional */
+      
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #a199dc;
+    }
+
+    .resume-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1.5rem;
+      background-color: white;
+      color: #5a4fcf;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .resume-button:hover {
+      background-color: #a199dc;
+      color: white;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #e0e0e0;
+      border-bottom: 2px solid #555;
+      padding-bottom: 0.5rem;
+    }
+
+    .experience-entry {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .company {
+      font-size: 1.5rem;
+      color: #a199dc; /* warm gold highlight */
+      margin-bottom: 0.25rem;
+    }
+
+    .position {
+      font-size: 1.1rem;
+      color: #b0b0b0;
+      margin-bottom: 0.75rem;
+    }
+
+    .experience-details {
+      padding-left: 1.5rem;
+      color: #d0d0d0;
+    }
+
+    .experience-details li {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div id="vanta-bg">
+    <!-- Navbar -->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+    </nav>
+
+    <!-- Hero / Overlay Section -->
+    <div id="about" class="overlay about-container">
+      <div class="about-text">
+        <h1 style="font-size: 2.3rem;">Hi, I'm <span class="highlight">Matthew Oatman</span></h1>
+        <p>
+          I'm a student studying Computer Science and minoring in Corporate Practice at the University of Notre Dame. I'm passionate about engineering, software development, and <br> solving real-world problems with code. Welcome to my <br> personal site!
+        </p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/matthew-oatman" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/MatthewOatman" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:moatman2@nd.edu"><i class="fas fa-envelope"></i></a>
+        </div>   
+        <a href="resume.pdf" class="resume-button" target="_blank">View Resume</a>     
+      </div>
+      <div class="about-image">
+        <img src="images/IMG_6888.jpeg" alt="Matthew Oatman">
+      </div>
+    </div>
+
+    <!-- About 
+    <div id="about" class="section">
+      <h1>About Me</h1>
+      <p>This is where you'll describe yourself. Your background, passions, and goals go here.</p>
+    </div>
+   -->
+
+    <!-- Experience -->
+    <div id="experience" class="section">
+      <h1 class="section-title">Work Experience</h1>
+
+      <div class="experience-entry">
+        <h3 class="company">Vcare Connect | Enschede, Netherlands</h3>
+        <p class="position">Software Engineering Intern — Summer 2025</p>
+        <ul class="experience-details">
+          <li>TDB</li>
+        </ul>
+      </div>
+    
+      <div class="experience-entry">
+        <h3 class="company">Lucy Family Institute of Data and Society | University of Notre Dame</h3>
+        <p class="position">Research Assistant — January 2025 – Present</p>
+        <ul class="experience-details">
+          <li>Engineered an OAuth authorization system to seamlessly integrate DatModo (InvenioRDM) with Apache Superset, enabling DatModo users to securely access advanced data visualization tools with distribution capabilities.</li>
+          <li>Collaborated full-time with a senior software engineer to integrate Notre Dame’s research data management platform with third-party tools and services.</li>
+        </li>
+        </ul>
+      </div>
+
+      <div class="experience-entry">
+        <h3 class="company">Automatic Program Comprehension Lab | University of Notre Dame</h3>
+        <p class="position">Research Assistant — September 2024 – December 2025</p>
+        <ul class="experience-details">
+          <li>Developed and implemented a prototype tool leveraging GPT-3.5 to translate natural language into SQL queries, enabling efficient and accurate retrieval of over 500,000 contact entries</li>
+          <li>Optimized database search functionality and automated data management processes by maintaining a PostgreSQL database and scripting automated data uploads
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Projects -->
+    <div id="projects" class="section">
+      <h1 class="section-title">Projects</h1>
+      <p>Stay tuned...</p>
+    </div>
+  </div>
+
+  <!-- Vanta & Three.js Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      VANTA.NET({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xa199dc,
+        backgroundColor: 0x1a102f,
+        points: 20.00,
+        maxDistance: 23.00,
+        spacing: 16.00
+      });
+    });
+  </script>
+</body>
+
+</html>
